@@ -1,16 +1,18 @@
 @import "bootstrap.min.css"
 
+// @font-face {
+//    font-family Helvetica Neue
+//    font-style normal
+//    font-weight normal
+//    src url(../fonts/Helvetica.ttf)
+// }
+/*==== Carousel full screen =====*/
 .full-screen {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-// header
-// 	div
-// 		div
-// 			div
-// 				img
-// 					width 100%
+/*==== Carousel fade =====*/
 .carousel-fade {
     .carousel-inner {
         .item {
@@ -42,3 +44,45 @@
         z-index: 2;
     }
 }
+
+/*==== Estilos Header =====*/
+body
+    font-family Helvetica, Arial, sans-serif
+.header
+    position relative
+    &-contenedor
+        position absolute
+        top 35%
+        left 6.224%
+        &_fila
+            &_columna
+                color white
+                text-align center
+                &_titulo
+                    text-transform uppercase
+                    // font-weight 700
+                    font-size 3.5em
+                    letter-spacing 2px
+                    margin-bottom 25px
+                &_descripcion
+                    font-size 1.5em
+                    letter-spacing 1px
+                &_link
+                    display block
+                    text-decoration none !important
+                    color white
+                    text-transform uppercase
+                    font-weight bold
+                    padding 10px
+                    border-radius 10px
+                    border 1px solid white
+                    width 190px
+                    margin-left auto
+                    margin-right auto
+                    margin-top 30px
+                    transition .5s
+                    &:hover
+                        color red
+                        background white
+                        transition .5s ease
+        
