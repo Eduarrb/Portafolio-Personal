@@ -7,9 +7,12 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.localScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
 </head>
-<body>
-	<header class="header">
+<body id="body">
+	<header class="header section" id="header">
 		<div id="mycarousel" class="carousel slide carousel-fade sideBar" data-ride="carousel" data-pause="false">
 		  <!-- Indicators -->
 		  <!-- <ol class="carousel-indicators">
@@ -59,12 +62,12 @@
 					<p class="header-contenedor_fila_columna_descripcion">
 						FrontEnd developer & Bass Player
 					</p>
-					<a class="header-contenedor_fila_columna_link" href="#home">Más acerca de mi</a>
+					<a class="header-contenedor_fila_columna_link" href="#menu">Más acerca de mi</a>
 				</div><!-- header-contenedor_fila_columna -->
 			</div><!-- header-contenedor_fila -->
 		</div><!-- header-contenedor bienvenida -->
 	</header><!-- header -->
-	<div class="navbar">
+	<div class="navbar section" id="menu">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -77,8 +80,8 @@
 			</div><!-- navbar-header -->
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-		            <li><a href="#">INICIO</a></li>
-		            <li><a href="#about">ABOUT</a></li>
+		            <li><a href="#header">INICIO</a></li>
+		            <li><a href="#home">ABOUT</a></li>
 		            <li><a href="#contact">HABILIDADES</a></li>
 		            <li><a href="#contact">EXPERIENCIA</a></li>
 		            <li><a href="#contact">CONTACTAME</a></li>
@@ -103,5 +106,35 @@
 	</section><!-- section -->
 	
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://demos.flesler.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.localScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'xy';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: '#body', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1500,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+	</script>
 </body>
 </html>
