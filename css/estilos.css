@@ -1,4 +1,5 @@
 @import "bootstrap.min.css";
+@import "font-awesome.min.css";
 /*==== Carousel full screen =====*/
 .full-screen {
   background-size: cover;
@@ -143,4 +144,35 @@ body {
   transition: 0.5s;
   color: #125599;
   text-decoration: none;
+}
+.about-contenedor {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.about-contenedor_fila_linea {
+  border-bottom: 1px solid #125599;
+}
+.about-contenedor_fila_titulo,
+.about-contenedor_fila_parrafo {
+  text-align: center;
+}
+.about-contenedor_fila_titulo {
+  color: #125599;
+}
+.about-contenedor_fila_iconCont {
+  text-align: center;
+}
+.about-contenedor_fila_iconCont a {
+  display: block;
+  text-decoration: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 50px;
+}
+.about-contenedor_fila_iconCont a span {
+  display: block;
+  font-size: 25px;
+  margin-top: 20px;
+  font-family: Helvetica;
+  color: #000;
 }
