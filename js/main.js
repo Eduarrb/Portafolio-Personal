@@ -54,5 +54,8 @@ jQuery(function( $ ){
       });
     });
 
-/*Tooltip*/
+/*PopOver*/
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
