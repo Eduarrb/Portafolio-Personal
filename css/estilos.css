@@ -80,6 +80,12 @@ body {
   background: #125599;
   border-radius: 0;
   margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 51px;
+  left: 0;
+  top: 351px;
+  z-index: 1000;
 }
 .navbar .container .navbar-header .navbar-toggle .icon-bar {
   background-color: #fff;
@@ -99,14 +105,20 @@ body {
   color: #fff;
   transition: 0.5s;
 }
-.navbar .container .navbar-collapse .nav li a:hover {
+.navbar .container .navbar-collapse .nav li a:hover,
+.navbar .container .navbar-collapse .nav li a:focus {
   background-color: #00478a;
   transition: 0.5s;
+}
+.fixed {
+  position: fixed;
+  top: 0 !important;
 }
 .me {
   background-color: #125599;
 }
 .me .container {
+  padding-top: 51px;
   padding-bottom: 100px;
 }
 .me .container .row {

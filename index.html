@@ -6,10 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/estilos.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.6/jquery.scrollTo.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
-	<script type="text/javascript" src="js/jquery.localScroll.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body id="body">
 	<header class="header section" id="header">
@@ -79,14 +78,14 @@
 		        <a class="navbar-brand em-text" href="#">MENU</a>
 			</div><!-- navbar-header -->
 			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
+				<ul class="nav navbar-nav" id="main-nav-list">
 				<!-- data-toggle="collapse" data-target=".navbar-collapse" para que se auto collapse el menu -->
-		            <li><a href="#header" data-toggle="collapse" data-target=".navbar-collapse">INICIO</a></li>
-		            <li><a href="#about" data-toggle="collapse" data-target=".navbar-collapse">ABOUT</a></li>
-		            <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse">HABILIDADES</a></li>
-		            <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse">EXPERIENCIA</a></li>
-		            <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse">CONTACTAME</a></li>
-		            <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse">BLOG</a></li>
+		            <li><a href="#header" data-target=".navbar-collapse">INICIO</a></li>
+		            <li><a href="#about" data-target=".navbar-collapse">ABOUT</a></li>
+		            <li><a href="#contact" data-target=".navbar-collapse">HABILIDADES</a></li>
+		            <li><a href="#contact" data-target=".navbar-collapse">EXPERIENCIA</a></li>
+		            <li><a href="#contact" data-target=".navbar-collapse">CONTACTAME</a></li>
+		            <li><a href="#contact" data-target=".navbar-collapse">BLOG</a></li>
 		        </ul>
 			</div>
 		</div><!-- container -->

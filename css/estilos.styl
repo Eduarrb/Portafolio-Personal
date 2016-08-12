@@ -90,6 +90,12 @@ body
     background #125599
     border-radius 0
     margin-bottom 0
+    position: absolute;
+    width: 100%;
+    height: 51px;
+    left: 0;
+    top:351px;
+    z-index: 1000;
     .container
         .navbar-header
             .navbar-toggle
@@ -107,12 +113,17 @@ body
                     a
                         color white
                         transition .5s
-                    a:hover
+                    a:hover,
+                    a:focus
                         background-color #00478a
                         transition .5s
+.fixed
+    position fixed
+    top 0 !important
 .me
     background-color #125599
     .container
+        padding-top 51px
         padding-bottom 100px
         .row
             margin-top 30px
